@@ -12,7 +12,7 @@ def Ln_i(n, i, x_vector, x):
 
 # INT_Lagrange: Retorna el polinomio generado P_n_eq, listo para evaluar cualquier
 # x y tomar el valor de la curva interpolada en cualquier punto
-def INT_Lagrange(x_vector, y_vector, verbose=False):
+def INT_Lagrange(x_vector, y_vector, verbose):
 	#=========================================
 	if verbose:
 		print("=========================================")
@@ -29,9 +29,9 @@ def INT_Lagrange(x_vector, y_vector, verbose=False):
 			print("-----------------------------------")
 			print("Evaluando x = {}".format(x))
 		#=========================================
-		n = x_vector.size
+		n = len(x_vector)
 		acc = 0
-		for i in range(y_vector.size):
+		for i in range(len(y_vector)):
 			#=========================================
 			if verbose:
 				print("L_{},{}:{}".format(n, i, Ln_i(n, i, x_vector, x)))
@@ -42,7 +42,12 @@ def INT_Lagrange(x_vector, y_vector, verbose=False):
 		if verbose:
 			print("Finalmente, P_{}({}):{}".format(n, x, acc))
 			print("-----------------------------------")
-		#=========================================
 		return acc
 	return P_n_eq
+
+x_vector=[1,2,3,4,5,6,7,8]
+y_vector=[1,4,10,18,26,38,52,69]
+poly=INT_Lagrange(x_vector, y_vector, verbose=True)
+for val in x_vector:
+    print(poly(val,True))
 
