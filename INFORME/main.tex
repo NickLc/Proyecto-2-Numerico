@@ -196,6 +196,15 @@ Conocer la concentración de las soluciones es muy importante porque gracias a e
 	Problema de interpolación: Determinar un spline $s\in S_3^2 (\triangle)$ tal que:
 	$s (x_i )=f_i, i=0,1,….n$, y necesitamos imponer además dos condiciones adicionales en los puntos de frontera $x_0$ y $x_n$. Por ejemplo si el spline satisface  $s^" (x_0 )=0$ y $s^" (x_n )=0$ se dice que es un spline cubico natural.
 	
+	\item \textbf{REGRESIÓN POR MÍNIMOS CUADRADOS}\\
+	En este método se pretende trazar la recta que más se acerque al conjunto de datos dado, expresada matemáticamente como: \[Y=C_1X+C_2+error\]
+	Los valores $C_1, C_2$ y el error, se pueden calcular de las siguientes maneras:
+	{\scriptsize \[C_1=(n\sum X_i*Y_i -\sum X_i\sum Y_i)/(n\sum X_i^{2}-(\sum X_i)^{2})\]}
+	\[C_2=\sum Y_i/n - C_1\sum X_i/n\]
+	\[error=(\sum Y_i-C_2-C_1X_i)^{2}\]
+	El error se da en términos de la suma de los cuadrados de la diferencia entre el valor muestral y el valor calculado con la recta de regresión.\\
+	Si los datos no son muy exactos o tienen asociado un error entonces la mejor manera es establecer una sola curva que represente la tendencia general de los datos observados.
+	
 	\item \textbf{ESTIMACIÓN DEL ERROR}\\
 	Sea $f\in C^{n+1}[a,b]$. Sea $P_n(x)$ el polinomio de grado $\leq n$ que interpola f en los n+1 puntos (distintos) $x_0, x_1, ..., x_n$ en el intervalo [a,b]. Para cada valor fijo $x\in [a,b]$ existe $\xi (x) \in <a,b>$ tal que:
 	
