@@ -54,18 +54,24 @@
 
 \begin{document}
 \begin{center}
- {\Large \textbf{PREDICCIÓN DE LA CONCENTRACIÓN QUÍMICA UTILIZANDO INTERPOLACIÓN POLINÓMICA}}
+ {\Large \textbf{PREDICCIÓN DE LA CONCENTRACIÓN DEL PRODUCTO EN UNA REACCIÓN QUÍMICA}}
 \end{center}
 \begin{center}
- Lázaro Camasca$^{1}$, Ponce Pinedo$^{2}$, Sarria Palacios$^{3}$, Loayza Pizarro$^{4}$\vskip5pt
+ Lázaro-Camasca$^{1}$, Ponce-Pinedo$^{2}$, Sarria-Palacios$^{3}$, Loayza-Pizarro$^{4}$\vskip5pt
  {\it Facultad de Ciencias$^1$, Universidad Nacional de Ingenier\'{\i}a$^1$\\}\vskip5pt
- Email: elazaroc@uni.pe$^{1}$, victor.ponce.p@uni.pe$^{2}$,correo-uni-eduardo v$^{3}$, fernando.loayza.p@uni.pe$^{4}$
+ Email: elazaroc@uni.pe$^{1}$, victor.ponce.p@uni.pe$^{2}$,esarriap@uni.pe$^{3}$, fernando.loayza.p@uni.pe$^{4}$
 \end{center}
 %\maketitle 
 \vspace*{0.4cm}
 \begin{abstract}
 
-\noindent Las matemáticas son el pilar de muchas diciplinas tales como la física, química, computación, biología, ingeniería.  En concreto el método de \textbf{Interpolación Polinómica} nos permite obtener datos a partir de casos experimentales, en este caso los datos vienes a ser las concentraciones químicas. Conocer estas concentraciones ayuda a muchos profesionales. Los químicos y biólogos miden las cantidades de monóxido y dióxido de carbono, dióxido de azufre y otros agentes contaminantes para determinar los niveles de \textbf{contaminación en el ambiente}. Los laboratoristas que trabajan en la industria farmacéutica miden las cantidades de sustancias necesarias para preparar soluciones nasales, oftálmicas, sedantes, analgésicos e hidratantes; todas estas de concentración determinada y de cuya exacta preparación \textbf{depende de la vida y la pronta recuperación de cientos de miles de enfermos}. En las industrias de bebidas gaseosas los ingenieros miden las cantidades de edulcorantes, cafeína, ácido fosfórico, entre otros, con el propósito de que estas sean gratas al paladar, refrescantes y comercialmente rentables, \textbf{aumentar el ingreso significativamente a las industrias}.
+
+En muchos problemas cientificos se necesita obtener datos a partir de casos experimentales.
+
+
+\noindent Conocer estas concentraciones ayuda a muchos profesionales. Los químicos y biólogos miden las cantidades agentes contaminantes para determinar los niveles de \textbf{contaminación en el ambiente}. En la industria farmacéutica los laboritaristas miden las cantidades de sustancias necesarias para preparar medicamentos; todas estas de concentración determinada y de cuya exacta preparación \textbf{depende de la vida y la pronta recuperación de cientos de miles de enfermos}. En las industrias de bebidas gaseosas los ingenieros miden las cantidades de edulcorantes, cafeína, ácido fosfórico, entre otros, con el propósito de que estas sean gratas al paladar, refrescantes y comercialmente rentables, \textbf{ingrementando sus ingresos economicos}.
+
+ 
 
 \end{abstract}
 
@@ -97,6 +103,10 @@
 \begin{center}
 {\large \bf 1. INTRODUCCI\'ON}
 \end{center}
+
+En las reacciones quimicas la velocidad de la reacción dependen de diversos parametros tales como la temperatura, la presión, la concentracion de los reactivos estos al ser va
+
+
 Conocer la concentración de las soluciones es muy importante porque gracias a ello se puede establecer las cantidades de soluto y solvente presentes en una solución, muchos profesionales tienen que medir, necesariamente, una de las siguientes magnitudes físicas: Masa (m), volumen (v) y cantidad de sustancia (n). \\
  
 Por ello presente trabajo describe la obtención de una función que describirá la concentración de producto de una reacción química en función del tiempo. Esta función será calculada mediante métodos de interpolación polinomial utilizando puntos que han sido obtenidos de manera experimental.
@@ -138,6 +148,7 @@ Por ello presente trabajo describe la obtención de una función que describirá
 \noindent \textbf{PARTE NUMÉRICA}:	
 \begin{itemize}
 	\item \textbf{INTERPOLACIÓN POLINÓMICA}
+	
 	Dados n+1 puntos $(x_0,y_0), (x_1,y_1), … , (x_n,y_n)$ con $x_i$\not=$x_j$, si $i$\not=$j$ $ existe un único polinomio $ $P_n (x)$ de $grado $\leq$ n$ $ tal que $ $P(x_i )=y_i  \forall i=0,1,…,n$.
 	\item \textbf{Datos de Interpolación}: 
 	${(x_k,f_k )} $$, k=0,1,…..,n$.
