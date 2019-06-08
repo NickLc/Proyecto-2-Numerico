@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.27)  7 JUN 2019 13:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.27)  8 JUN 2019 08:55
 entering extended mode
 **./main.tex
 (main.tex
@@ -1090,238 +1090,19 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 60.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 94--97
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
  []
 
 [1
 
 {C:/Users/ADMIN/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 152.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.152 ...(x_1,y_1), … , (x_n,y_n)$ con $x_i$\not
-                                                  =$x_j$, si $i$\not=$j$ $ e...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.152 ...,y_1), … , (x_n,y_n)$ con $x_i$\not=$x_
-                                                  j$, si $i$\not=$j$ $ exist...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.152 ...x_n,y_n)$ con $x_i$\not=$x_j$, si $i$\not
-                                                  =$j$ $ existe un único po...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.152 ...ot=$j$ $ existe un único polinomio $ $P_
-                                                  n (x)$ de $grado $\leq$ n$...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.152 ...ico polinomio $ $P_n (x)$ de $grado $\leq
-                                                  $ n$ $ tal que $ $P(x_i )=...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.152 ...x)$ de $grado $\leq$ n$ $ tal que $ $P(x_
-                                                  i )=y_i  \forall i=0,1,…...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 152.
-
-
-Overfull \hbox (2.75793pt too wide) in paragraph at lines 152--153
-[]\OT1/cmr/m/n/10 Dados n+1 pun-tos $(\OML/cmm/m/it/10 x[]; y[]\OT1/cmr/m/n/10 
-)\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; y[]\OT1/cmr/m/n/10 )
-\OML/cmm/m/it/10 ; :::; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; y[]\OT1/cmr/m/n/
-10 )$
- []
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 154.
-
-
-! Package inputenc Error: Unicode char ⋯ (U+22EF)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.158 	$P(x)=a_0+a_1 x+⋯
-                          ⋅+a_n x^n$
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char ⋅ (U+22C5)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.158 	$P(x)=a_0+a_1 x+⋯⋅
-                             +a_n x^n$
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 160.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.160 ...lan las condiciones de interpolación: \[
-                                                  P(x_k )= f_k,k=0,1,….,n\]\\
-[2]
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 160.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
-[]\OT1/cmr/bx/n/10 M[]ETO-DOS DE IN-TER-PO-LA-CI[]ON
- []
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 165.
-
-
-! Package inputenc Error: Unicode char ⋯ (U+22EF)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 	$ P(x)=f_0 L_0 (x)+f_1 L_1 (x)+⋯
-                                         ⋅+f_n L_n (x)=\sum_{i=0}^{n}f_i L...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char ⋅ (U+22C5)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 	$ P(x)=f_0 L_0 (x)+f_1 L_1 (x)+⋯⋅
-                                            +f_n L_n (x)=\sum_{i=0}^{n}f_i L...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 181.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 181.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 182.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 182.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 183.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 183.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 183.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 186.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 186.
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 186.
-
-
-Underfull \hbox (badness 6094) in paragraph at lines 181--187
-\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 x[]; x[]; :::::; x[]\OT1/cm
-r/m/n/10 ] = (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 x[]; x[]; :::
-::; x[]\OT1/cmr/m/n/10 ] \OMS/cmsy/m/n/10  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--187
-\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OML/c
-mm/m/it/10 f\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ] + \OML/cmm/m
-/it/10 f\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 x[]; x[]\OT1/cmr/m/n/10 ](\OML/cmm/m/
-it/10 x \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) +
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--187
-\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 x[]; x[]; x[]\OT1/cmr/m/n/1
-0 ](\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )
-(\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) + 
-\OML/cmm/m/it/10 :::: \OT1/cmr/m/n/10 +
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 187--189
-[]\OT1/cmr/bx/n/10 INTERPOLACI[]ON PO-LI-NO-MIAL
- []
-
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 200.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.204 	
-        [3]
-
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 209.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
@@ -1329,30 +1110,112 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.272 \end{multicols}
-                      [4]pdfTeX warning (ext4): destination with the same ident
-ifier (name{page.}) has been already used, duplicate ignored
+l.166 \begin{center}
+                     [2]
+! Missing delimiter (. inserted).
+<to be read again> 
+                   $
+l.168 ... \\ 1 & \mbox{si } i=j\end{matrix}\right$
+                                                  
+I was expecting to see something like `(' or `\{' or
+`\}' here. If you typed, e.g., `{' instead of `\{', you
+should probably delete the `{' by typing `1' now, so that
+braces don't get unbalanced. Otherwise just proceed.
+Acceptable delimiters are characters whose \delcode is
+nonnegative, or you can use `\delimiter <delimiter code>'.
+
+
+Overfull \hbox (20.73816pt too wide) in paragraph at lines 192--193
+[]$\OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = (
+[])([])\OML/cmm/m/it/10 :::\OT1/cmr/m/n/10 ([])([])\OML/cmm/m/it/10 :::\OT1/cmr
+/m/n/10 ([])$ 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.273 \newpage
+l.241 \begin{center}
+                     [3]
+
+LaTeX Warning: Command \' invalid in math mode on input line 267.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ...@spacefactor \spacefactor }\accent 
+                                                  #1 #2\egroup \spacefactor ...
+l.267 ...\displaystyle\sum_{i=1}^m {[d_i]}^2 = mí
+                                                  nimo$
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Missing { inserted.
+<to be read again> 
+                   \begingroup 
+l.267 ...\displaystyle\sum_{i=1}^m {[d_i]}^2 = mí
+                                                  nimo$
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+(If you're confused by all this, try typing `I}' now.)
+
+
+LaTeX Warning: Command \i invalid in math mode on input line 267.
+
+! You can't use `\spacefactor' in math mode.
+\add@accent ...}\accent #1 #2\egroup \spacefactor 
+                                                  \accent@spacefactor 
+l.267 ...\displaystyle\sum_{i=1}^m {[d_i]}^2 = mí
+                                                  nimo$
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.267 ...laystyle\sum_{i=1}^m {[d_i]}^2 = mínimo$
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no � in font cmex10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--314
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.317 
+       [4]pdfTeX warning (ext4): destination with the same identifier (name{pag
+e.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.355 \newpage
                [5]
-Underfull \hbox (badness 10000) in paragraph at lines 291--293
+Underfull \hbox (badness 10000) in paragraph at lines 373--375
 []\OT1/cmr/m/n/9 Dr. Heron Mo-ra-les Mar-che-na, \OT1/cmr/m/it/9 In-ter-po-la-
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 291--293
+Underfull \hbox (badness 10000) in paragraph at lines 373--375
 \OT1/cmr/m/it/9 cion, Di-fe-ren-cia-cion e In-te-gra-cion Numeri-ca,
  []
 
 
-Overfull \hbox (3.63745pt too wide) in paragraph at lines 291--293
+Overfull \hbox (3.63745pt too wide) in paragraph at lines 373--375
 \OT1/cmr/m/n/9 http://biblioteca.uns.edu.pe/saladocentes/archivoz/cu 
  []
 
 
-Overfull \hbox (4.09424pt too wide) in paragraph at lines 294--298
+Overfull \hbox (4.09424pt too wide) in paragraph at lines 376--380
 \OT1/cmr/m/it/9 ca Ge-ne-ral, \OT1/cmr/m/n/9 http://corinto.pucp.edu.pe/quimica
 general 
  []
@@ -1361,46 +1224,46 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.300 \end{document}
+l.382 \end{document}
                     %\grid [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 300.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 382.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 382.
  (main.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 300.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 300.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 382.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 382.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 300.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 382.
  ) 
 Here is how much of TeX's memory you used:
- 17800 strings out of 493305
- 324682 string characters out of 3129802
- 403553 words of memory out of 3000000
- 21001 multiletter control sequences out of 15000+200000
+ 17793 strings out of 493305
+ 324600 string characters out of 3129802
+ 409553 words of memory out of 3000000
+ 20994 multiletter control sequences out of 15000+200000
  8155 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,7n,56p,1171b,534s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,8n,56p,1080b,471s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmti9.pfb>
-Output written on main.pdf (6 pages, 223608 bytes).
+nts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmti9.pfb>
+Output written on main.pdf (6 pages, 217785 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)

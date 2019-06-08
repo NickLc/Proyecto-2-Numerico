@@ -54,7 +54,7 @@
 
 \begin{document}
 \begin{center}
- {\Large \textbf{PREDICCIÓN DE LA CONCENTRACIÓN DEL PRODUCTO EN UNA REACCIÓN QUÍMICA}}
+ {\Large \textbf{PREDICCIÓN DE LA CONCENTRACIÓN EN UNA REACCIÓN QUÍMICA}}
 \end{center}
 \begin{center}
  Lázaro-Camasca$^{1}$, Ponce-Pinedo$^{2}$, Sarria-Palacios$^{3}$, Loayza-Pizarro$^{4}$\vskip5pt
@@ -63,36 +63,32 @@
 \end{center}
 %\maketitle 
 \vspace*{0.4cm}
+
 \begin{abstract}
 
-
-En muchos problemas cientificos se necesita obtener datos a partir de casos experimentales.
-
-
-\noindent Conocer estas concentraciones ayuda a muchos profesionales. Los químicos y biólogos miden las cantidades agentes contaminantes para determinar los niveles de \textbf{contaminación en el ambiente}. En la industria farmacéutica los laboritaristas miden las cantidades de sustancias necesarias para preparar medicamentos; todas estas de concentración determinada y de cuya exacta preparación \textbf{depende de la vida y la pronta recuperación de cientos de miles de enfermos}. En las industrias de bebidas gaseosas los ingenieros miden las cantidades de edulcorantes, cafeína, ácido fosfórico, entre otros, con el propósito de que estas sean gratas al paladar, refrescantes y comercialmente rentables, \textbf{ingrementando sus ingresos economicos}.
-
- 
+En diversos campos de la ingenieria y ciencia se necesita obtener datos a partir de casos experimentales. Las reacciones quimicas no son ajenas a esta, por ello conocer las concentraciones de estas ayuda a muchos profesionales. Los químicos y biólogos miden las cantidades agentes contaminantes para determinar los niveles de \textbf{contaminación en el ambiente}. En la industria farmacéutica los laboritaristas miden las cantidades de sustancias necesarias para preparar medicamentos; todas estas de concentración determinada y de cuya exacta preparación \textbf{depende de la vida y la pronta recuperación de cientos de miles de enfermos}. En las industrias alimentarias los ingenieros miden las cantidades de sustancias, con el propósito de \textbf{incrementar sus ingresos economicos}. Este documento proporciona una comparación entre los metodos de ajuste exacto(Interpolación) y minimos cuadrados(Aproximación Funcional), además sugiere que metodo o la combinación de ambos predice con mayor exactitud la concentracion del producto.
 
 \end{abstract}
+
 
 \begin{quotation}
 	{\small
 		\noindent\textbf{Palabras Clave:} \\ 
-	Interpolación, Predicción química, Concentración, Contaminación ambiental.
-	}
+	Casos experimentales, Concentración, Contaminacion Ambiental, Industrias, Interpolación, Aproximación Funcional.
+	 }
 \end{quotation}
 
+
 \renewcommand{\abstractname}{Abstract}
+
 \begin{abstract}
-	\noindent Mathematics is the pillar of many disciplines such as physics, chemistry, computing, biology, engineering. In particular, the \textbf{Polynomial Interpolation} method allows us to obtain data from others, in this case the data becomes the chemical concentrations. Knowing the knowledge of these concentrations helps many professionals. Chemists and biologists measure the amounts of carbon monoxide and dioxide, sulfur dioxide and other pollutants to determine the levels of pollution in the environment. The laboratoristas that work in the pharmaceutical industry measure the quantities of substances necessary to prepare nasal, ophthalmic, sedative, analgesic, antispasmodic, moisturizing solutions; all of these of determined concentration and whose exact preparation \textbf{depends on the life and the quick recovery of hundreds of thousands of patients}. In the soft drink industries engineers measure the amounts of sweeteners, caffeine, phosphoric acid, among others, with the purpose that these are pleasant to the palate, refreshing and commercially profitable,\textbf{increase the income significantly to the industries}.
-	
+	\noindent Falta
 \end{abstract}
 
 
 \begin{quotation}
-{\small
-	\noindent \textbf{Keywords:} \\ 
-		Interpolation, chemical prediction, concentration, environmental pollution, industrial income.\\
+	{\small
+	\textbf{Keywords:} \\ 
 	}
 \end{quotation}
 
@@ -100,134 +96,203 @@ En muchos problemas cientificos se necesita obtener datos a partir de casos expe
 \pagebreak
 
 \begin{multicols}{2}
-\begin{center}
-{\large \bf 1. INTRODUCCI\'ON}
-\end{center}
-
-En las reacciones quimicas la velocidad de la reacción dependen de diversos parametros tales como la temperatura, la presión, la concentracion de los reactivos estos al ser va
-
-
-Conocer la concentración de las soluciones es muy importante porque gracias a ello se puede establecer las cantidades de soluto y solvente presentes en una solución, muchos profesionales tienen que medir, necesariamente, una de las siguientes magnitudes físicas: Masa (m), volumen (v) y cantidad de sustancia (n). \\
- 
-Por ello presente trabajo describe la obtención de una función que describirá la concentración de producto de una reacción química en función del tiempo. Esta función será calculada mediante métodos de interpolación polinomial utilizando puntos que han sido obtenidos de manera experimental.
 
 \begin{center}
-{\large \bf 2. CONCEPTOS PREVIOS}
+	{\large \bf 1. INTRODUCCIÓN}
 \end{center}
-%==============================================================================
-\noindent \textbf{PARTE QUÍMICA}:
 
-\begin{itemize}
+En las reacciones quimicas la velocidad de la reacción dependen de diversos parametros tales como la temperatura, la presión, la concentracion de los reactivos estos al ser variados aumentan o disminuyen la velocidad.
 
-	\item \textbf{Reacciones Químicas:} Es un proceso en el que dos o más sustancias (reactantes) se transforman en una o más sustancias (productos). Estas reacciones deben satisfacer la ley de la conservación de la materia.
-    \begin{center}
-		$aA  +  bB  ->  cC  +  dD$
-    \end{center}
-	\item \textbf{Velocidad Instantánea de Reacción}: Expresa el cambio de la concentración de un reactivo o de un producto por unidad de tiempo (concentración/tiempo).
+\noindent Las industrias se interesan grandemente en que las reacciones químicas se lleven a cabo rápidadmente, para \textbf{ahorrar tiempo y dinero}. Es por esto que  encontrar las concentraciones en un tiempo especifico es muy complicado, una posible solución seria contar con un dispositivo que registre en tiempo real las concentraciones, pero esto seria muy costoso. Una alternativa para esto es
+el uso de la matematica en concreto el uso de metodos numericos.
+
+\noindent Por ello en presente trabajo se describe la obtención de una función que caracteriza la concentración de producto de una reacción química en función del tiempo. Esta función será calculada mediante métodos de interpolación polinomial y minimos cuadrados a partir puntos tabulados que han sido obtenidos de manera experimental.\\
+
+
+\begin{center}
+	{\large \bf 2. CONCEPTOS PREVIOS}
+\end{center}
+
+\noindent {\large \bf 2.1. Reacciones Química}
+
+\noindent Es un proceso en el que dos o más sustancias (reactantes) se transforman en una o más sustancias (productos). Estas reacciones deben satisfacer la ley de la conservación de la materia.
+
+\begin{center}
+	$aA  +  bB  ->  cC  +  dD$
+\end{center}
+
+
+\noindent {\large \bf 2.1. Velocidad Instantánea de Reacción}
+
+\noindent Expresa el cambio de la concentración de un reactivo o de un producto por unidad de tiempo (concentración/tiempo).\\
+
+\begin{center}
 	{\scriptsize
-	         v = -1/a * d[A]/d[t] =-1/b * d[B]/d[t] =1/c * d[C]/d[t] =1/d* d[D]/d[t] 
+		$v = \dfrac{-d[A]}{a*d[t]} = \dfrac{-d[B]}{b*d[t]} = \dfrac{-d[C]}{c*d[t]} = \dfrac{-d[D]}{d*d[t]}$ \\ 
+				
 	}
+\end{center}
 
-	\item \textbf{ORDEN DE LAS REACCIONES}
-	\item \textbf{Reacciones de Orden Cero}: Son aquellas en que la velocidad no depende de la concentración de los reactivos. Entonces para: $A -> B$, la ley de velocidad será: $v=k[A]^0=k$. Donde $k$ es la constante de velocidad y su unidad es \[Mt^{-1}\] Por tanto:
-	$v=-d[A]/dt=k$.
-	Entonces:  \[[A]=-kt+[A]_0\]
+\vspace*{0.4cm}
 
-	\item \textbf{Reacciones de Primer Orden}: Para la reacción genérica de primer orden: $A \Rightarrow B$, la ley de velocidad será: $v=k[A]^1$, la unidad de $k$ es $t^{-1}$. Entonces se tiene:
-	$v=-d[A]/dt=k*[A]$\\
-	Resolviendo:   \[ln[A]=-kt+ ln[A]_0\]
+\noindent {\large \bf 2.2. Interpolación polinomial}
+
+\noindent Planteamos tres problemas relacionados con la aproximación de funciones
+
+Primero, suponga que tenemos una tabla de valores numéricos de una función:
+
+\begin{center}
+	\begin{tabular}{ c|c|c|c|c }
+		
+		$x$ & $x_0$ & $x_1$ & $...$ & $x_n$ \\ \hline
+		$y$ & $y_0$ & $y_1$ & $...$ & $y_n$
+	\end{tabular}
+\end{center}
+
+¿Es posible encontrar una fórmula simple y conveniente que reproduzca los puntos dados exactamente?
+
+El segundo problema es similar, pero se supone que la tabla de valores numéricos dada está contaminada por errores, como puede ocurrir si los valores provienen de un experimento de física. Ahora nos preguntamos por una fórmula que represente los datos (aproximadamente) y, si es posible, filtre los errores.
+
+Como un tercer problema, una función f está dada, quizás en la forma de un procedimiento computacional, pero es costoso evaluarla. En este caso, nos preguntamos por otra función g que sea simple de evaluar y produzca una aproximación razonable a f. A veces en este problema, queremos que g se aproxime a f con precisión total de máquina.
+
+En todos estos problemas, se puede obtener una función simple p que represente o aproxime a la tabla o función f dadas. La representación p siempre se puede tomar como un polinomio, aunque también se pueden usar muchos otros tipos de funciones simples. Una vez que se ha obtenido una función simple p, se puede usar en lugar de f en muchas situaciones. Por ejemplo, la integral de f se podría estimar con la integral de p y, generalmente, esta última debe ser más fácil de evaluar
+
+\noindent {\large \bf 2.2.1 Polinomios de Lagrange}
+\vspace*{0.2cm}
+
+\noindent Suponga que queremos interpolar funciones arbitrarias en un conjunto de nodos fijos $x_0, x_1, . . . , x_n$.
+Primero definimos un sistema de $n + 1$ polinomios especiales de grado n conocidos como \textbf{polinomios
+cardinales} en la teoría de interpolación. Éstos se denotan por $L_0, L_1, . . . , L_n$ y tienen la propiedad:
+\begin{center}
 	
-	\item \textbf{Reacciones de Segundo Orden}: Para la reacción genérica de segundo orden: $A ->B$, la ley de velocidad será: $v=k[A]^2$, la unidad de $k$ es \[M^{-1} t^{-1}\]
-	Por tanto: 
-	$v=-d[A]/dt=k*[A]^2$
-	Entonces: \[1/[A] =-kt+  1/[A]_0 \]
+$L_i(x_j) = \gamma_{ij}=\left \{ \begin{matrix} 0 & \mbox{si } i\not=j \\ 1 & \mbox{si } i=j\end{matrix}\right$
+\end{center}
+
+\noindent Una vez que están disponibles, podemos interpolar cualquier función $f$ por la \textbf{forma de Lagrange de interpolación polinomial}:
+\begin{center}
+	$p_n(x) = \displaystyle\sum_{i=0}^n L_i(x) f(x_i)$
+\end{center}
+
+\noindent Esta función $p_n$, al ser una combinación lineal de los polinomios $L_i$, es en sí misma un polinomio de grado a lo más $n$. Además, cuando evaluamos $p_n$ en $x_i$ obtenemos $f(x_j)$:
+\begin{center}
+	$p_n(x_j) = \displaystyle\sum_{i=0}^n L_i(x_j) f(x_i) = L_j(x_j)f(x_j) = f(x_j)$
+\end{center}
+
+\noindent Por tanto, $p_n$ es el polinomio de interpolación para la función $f$ en los nodos $x_0, x_1, . . . , x_n$. Ahora sólo resta escribir la fórmula para el polinomio cardinal $i$, que es
+
+\begin{center}
+$L_i(x) = \displaystyle\prod_{j\not=i,j=0}^n (\frac{x-x_j}{x_i-x_j})$
+\end{center}
+
+Esta fórmula indica que i(x) es el producto de n factores lineales:
+
+\vspace*{0.2cm}
 
 
-\end{itemize}
-%==============================================================================
-\noindent \textbf{PARTE NUMÉRICA}:	
-\begin{itemize}
-	\item \textbf{INTERPOLACIÓN POLINÓMICA}
-	
-	Dados n+1 puntos $(x_0,y_0), (x_1,y_1), … , (x_n,y_n)$ con $x_i$\not=$x_j$, si $i$\not=$j$ $ existe un único polinomio $ $P_n (x)$ de $grado $\leq$ n$ $ tal que $ $P(x_i )=y_i  \forall i=0,1,…,n$.
-	\item \textbf{Datos de Interpolación}: 
-	${(x_k,f_k )} $$, k=0,1,…..,n$.
-	Conocemos los valores de una función $f_k=f(x_k)$, en $n+1$ puntos distintos $x_k$, de un intervalo $[a,b]$.
-	
-	\item \textbf{Funciones Interpolantes}: Polinomios de grados menor o igual que n.
-	$P(x)=a_0+a_1 x+⋯⋅+a_n x^n$
+$L_i(x) = (\frac{x-x_0}{x_i-x_0}) (\frac{x-x_1}{x_i-x_1})...(\frac{x-x_{i_1}}{x_i-x_{i-1}})(\frac{x-x_{i+1}}{x_i-x_{i+1}})...(\frac{x-x_n}{x_i-x_n}) $
 
-	\item \textbf{Problema de Interpolación}: Determinar los coeficientes $a0, a1,…, an$ para que cumplan las condiciones de interpolación: \[P(x_k )= f_k,k=0,1,….,n\]\\
+\vspace*{0.2cm}
 
-	\item \textbf{MÉTODOS DE INTERPOLACIÓN POLINÓMICA}
+\noindent Los denominadores son sólo números; la variable $x$ se presenta únicamente en los numeradores. Por tanto, $i$ es un polinomio de grado $n$. Observe que cuando $L_i(x)$ se evalúa en $x = x_i$, cada factor en la ecuación anterior será $1$. Por tanto, $L_i(x_i) = 1$. Pero cuando se evalúa $L_i(x)$ en cualquier otro nodo, digamos, $x_j$, uno de los factores en la ecuación anterior será $0$ y $L_i(x_j) = 0$ para $i \not= j$.
+\vspace*{0.2cm}
 
-	\item \textbf{Método de Lagrange}:
-	Consiste en calcular previamente los polinomios  $L_i (x_i ),i=0,1,….,n$, llamados polinomios de Lagrange, que verifican:
+\noindent {\large \bf 2.2.2 Método de Newton}
 
-	$L_i (x_i )=1,L_i (x_j )=0,i\not=j$.
-	Estos polinomios vienen dados por la expresión:
+\vspace*{0.2cm}
 
-	$L_i (x)=\prod_{j=0,j\not=i}^{n}(x-x_j)/(x_i-x_j )$.
-	El polinomio de interpolación se escribe de la forma:
-	
-	$ P(x)=f_0 L_0 (x)+f_1 L_1 (x)+⋯⋅+f_n L_n (x)=\sum_{i=0}^{n}f_i L_i (x) $
-	
-	\item \textbf{Método Serie de Potencias}:
-	Este método construye un polinomio interpolante de orden n $P(x)=a_0+a_1*x+...+a_n*x^n $ para n+1 puntos dados, reemplazando los puntos dados en el polinomio y resolviendo el sistema de ecuaciones generado, hallando de esta manera sus coeficientes.
-	
-	\item \textbf{Método de Newton (Diferencias Divididas)}:
-	Consiste en escribir el polinomio de interpolación en la forma:
-	
-	$P(x)=A_0+A_1 (x-x_0 )+A_2 (x-x_0 (x-x_1 ))…+A_(n-1) (x-x_0 (x-x_1 )…(x-x_(n-1) )) $\\
-	Los coeficientes  $A_k$, que se denominan diferencias divididas de la función f en los puntos $x_0,x_1,…, x_k$, se denotan por $A_k=f [x_0,x_1,…..,x_0]$ y se genera de forma recursiva mediante la fórmula: \\
-	$f [x_0,x_1,…..,x_0 ]=(f [x_1,x_2,…..,x_k ]-f [x_0,x_1,…..,x_{k-1}]  )/(x_k-x_0 )$
-	Partiendo de $f [x_0]=f (x_0)$.\\
-	Con esta notación, el polinomio de interpolación puede escribirse como:\\
-	$P(x)= f [x_0 ]+f [x_0,x_1]( x-x_0)+ f [x_0,x_1,x_2]( x-x_0) ( x-x_2)+….+ f [x_0,x_1,…,x_n]( x-x_0) ( x-x_1)….. ( x-x_{n-1})$.
-	\item \textbf{INTERPOLACIÓN POLINOMIAL POR PARTES}\\
-	El uso de polinomios de interpolación de alto grado puede producir errores grandes debido al alto grado de oscilación de este tipo de polinomios. Para evitar este problema se busca aproximar    la  función  desconocida  en  intervalos  pequeños  usando  polinomios  de  grado bajo. El caso más común de la interpolación por partes es usar polinomios cúbicos. 
-	\item \textbf{Interpolacion con Funciones Splines}:
-	Sea $\triangle$ una partición del intervalo $[a.b]$.
-	$\triangle _:  a=x_0<x_1<...<x_n=b$.
-	Un spline es una función polinómica a trozos en cada uno de los intervalos $[x_i,x_{i+1}]$ de la partición.
-	Notaremos por $S_m^k (\triangle)$ al conjunto de funciones de clase $k$ que son polinomios a trozos de grado $m$ en cada uno de los intervalos de partición:
-	
-	$S_n^k (\triangle)=\{ s\in C_m^k  [a,b] , s \|[x_i,x_{i+1} ]\in P_m\}$,
-	
-	donde $P_m$ denota el conjunto de polinomios de grado a lo sumo m.
-	
-	Notaremos:
-	$\triangle={x_0,x_1,….,x_n  }$ la partición dado por los nodos.
-	$h_i=x_{i+1}-x_i$ , a la amplitud del intervalo $[x_i,x_{i+1}]$.
-	$f_i$ a los valores de la función que queremos interpolar.
-	$m_i=(f_{i+1}-f_i)/h_i$ , a la pendiente de la curva en el intervalo $[x_i,x_{i+1}]$.
-	
-	\textbf{Interpolacion con splines cúbicos}: $S_3^2 (\triangle)$
-	
-	Funciones interpolantes: Splines en $S_3^2 (\triangle)$ se trata de funciones de clase 2 definidas a trozos mediante polinomios de grado 3 en cada intervalo de la partición. 
-	Problema de interpolación: Determinar un spline $s\in S_3^2 (\triangle)$ tal que:
-	$s (x_i )=f_i, i=0,1,….n$, y necesitamos imponer además dos condiciones adicionales en los puntos de frontera $x_0$ y $x_n$. Por ejemplo si el spline satisface  $s^" (x_0 )=0$ y $s^" (x_n )=0$ se dice que es un spline cubico natural.
-	
-	\item \textbf{REGRESIÓN POR MÍNIMOS CUADRADOS}\\
-	En este método se pretende trazar la recta que más se acerque al conjunto de datos dado, expresada matemáticamente como: \[Y=C_1X+C_2+error\]
-	Los valores $C_1, C_2$ y el error, se pueden calcular de las siguientes maneras:
-	{\scriptsize \[C_1=(n\sum X_i*Y_i -\sum X_i\sum Y_i)/(n\sum X_i^{2}-(\sum X_i)^{2})\]}
-	\[C_2=\sum Y_i/n - C_1\sum X_i/n\]
-	\[error=(\sum Y_i-C_2-C_1X_i)^{2}\]
-	El error se da en términos de la suma de los cuadrados de la diferencia entre el valor muestral y el valor calculado con la recta de regresión.\\
-	Si los datos no son muy exactos o tienen asociado un error entonces la mejor manera es establecer una sola curva que represente la tendencia general de los datos observados.
-	
-	\item \textbf{ESTIMACIÓN DEL ERROR}\\
-	Sea $f\in C^{n+1}[a,b]$. Sea $P_n(x)$ el polinomio de grado $\leq n$ que interpola f en los n+1 puntos (distintos) $x_0, x_1, ..., x_n$ en el intervalo [a,b]. Para cada valor fijo $x\in [a,b]$ existe $\xi (x) \in <a,b>$ tal que:
-	
-	 $f(x)-P_n(x) = f^{n+1}(\xi (x))/(n+1)! * (x-x_0)(x-x_1)...(x-x_n)$
+\noindent Supóngase que se tiene una función dada en forma tabular como se presenta a continuación
 
-\end{itemize}
+\begin{center}
+	\begin{tabular}{ c|c|c|c|c }
+		\hline
+		$Puntos$ & 0 & 1 & $...$ & n\\ \hline
+		$x$ & $x_0$ & $x_1$ & $...$ & $x_n$  \\
+		$f(x)$ & $f[x_0]$ & $f[x_1]$  &$...$ & $f[x_n]$ \\ \hline
+		
+	\end{tabular}
+\end{center}
+
+y que se desea aproximarla preliminarmente con un polinomio de primer grado que pasa, por ejemplo, por los puntos $(0)$ y $(1)$. Sea además dicho polinomio de la forma:
+\begin{center}
+	$p(x) = a_0 + a_1(x-x_0)$ ...... (*)
+\end{center}
+donde $x_0$ es la abscisa del punto $(0)$ y $a_0$,$a_1$ son constantes por determinar. Para encontrar el valor de $a_0$ se hace $x=x_0$, de donde $a_0 = p(x_0) = f[x_0]$, y fin de encontrar el valor de $a_1$ se hae $x = x_1$, de donde $a_1 = (f[x_1]-f[x_0])/(x_1-x_0)$, o sea la primera diferencia dividida $f[x_1,x_0]$.
+
+Al sustituir los valores de estas constantes en la ecuación (*) ésta queda
+\begin{center}
+	$p(x) = f[x_0] + (x - x_0)f[x_0,x_1]$
+\end{center}
+o sea un polinomio de primer grado en términos de diferencias divididas.
+Y si ahora se desea aproximar la función tabular con un polinomio de segundo grado que pase por los puntos (0), (1) y (2) y que tenga la forma:
+\begin{center}
+	$p_2(x) = a_0 + a_1(x-x_0) + a_2(x-x0)(x-x_1)$
+\end{center}
+generalizando se puede formar para $p_n$.
+
+\noindent Una observación muy importante acerca de $p_n$ es que los coeficientes $a_0, a_1,. ..$, no dependen de $n$. En otras palabras, $p_n$ se obtiene de $p_{n-1}$ sumando un término más, sin alterar los coeficientes que ya están en $p_{n-1}$. Este es porque comenzamos esperando que pn pudiera expresarse en la forma:
+\begin{center}
+	$p_n(x) = p_{n-1}(x) + a_n(x-x_0)...(x-x_{n-1})$
+\end{center}
+
+
+y descubrimos que esto de hecho era posible.
+
+\noindent Una forma de determinar sistemáticamente los coeficientes desconocidos $a_0, a_1, . . . , a_n$ es hacer $x$ igual a $x_0, x_1, . . . , x_n$ en la forma de Newton y a continuación escribimos la forma compacta de las ecuación:
+\begin{center}
+	$f(x_k) = \displaystyle\sum_{i=0}^k a_i \displaystyle\prod_{j=0}^{i-1} (x_k - x_j)$
+	
+\end{center}
+donde $(0 \le k \le n)$.
+
+\noindent Las ecuaciones se pueden resolver para las $a_i$ correspondientes, iniciando con $a_0$. Entonces vemos que $a_0$ depende de $f(x_0)$, que $a_1$ depende de $f(x_0)$ y $f(x_1)$, y así sucesivamente. En general, $a_k$ depende de $f(x_0), f(x_1), . . . , f(x_n)$. En otras palabras, $a_k$ depende de los valores de $f$ en los nodos $x_0, x_1, . . . , x_k$. La notación tradicional es:
+\begin{center}
+	$a_k = f [x_0, x_1, . . . , x_k]$
+\end{center}
+
+
+\noindent Esta ecuación define $f[x_0, x_1, . . . , x_k]$. La cantidad $f [x_0, x_1, . . . , x_k]$ se \textbf{llama diferencia dividida de
+orden $k$} para $f$.
+
+\vspace*{0.2cm}
+
+\noindent {\large \bf 2.3. Mínimos Cuadrados}
+
+\vspace*{0.2cm}
+
+Hasta ahora se ha enfocado en encontrar un polinomio de aproximación que pase \textbf{por los puntos} dados en forma tabular. Sin embargo, a veces la información (dada en la tabla) tiene errores significativos. En estas circunstacias no tiene sentido pasar un polinomio de aproximación por los puntos dados, sino sólo cerca de ellos.
+
+No obstante, esto crea un problema, ya que se puede pasar un número infinito de curvas \textbf{entre los puntos}. Para determinar \textbf{la mejor} curva se establece un criterio que la fije y una metología que la determine. El criterio más común  consiste en pedir la suma de distancia calculadas entre el valor de la función que aproxima $p(x_i)$ y el valor de la función $f(x_i)$ dada en la tabla, sea mínima, además para evitar problemas de derivabilidad más adelante, se acustumbra utilizar las distacias $d_i$ elevadas al cuadrado; es decir, que
+
+\begin{center}
+	$\displaystyle\sum_{i=1}^m {[p(x_i) - f(x_i)]}^2 = \displaystyle\sum_{i=1}^m {[d_i]}^2 = mínimo$
+\end{center} 
+
+si queremos aproximar una función en forma tabular con un polinomio de grado $n$, el procedimiento es minimizar la función:
+\begin{center}
+	$ \displaystyle\sum_{i=1}^m {[a_0 + a_1x_i + ... + a_n{x_i}^n - f(x_i)]}^2 $
+\end{center}
+el cual se obtiene derivaándola parcialmente con respecto a cada coeficiente $a_j$, $(0<j<n)$ e igualando a cero cada una de estas derivadas, con esto se llega la siguiente sistema lineal:
+
+\begin{center}
+	$a_0 m + a_1\displaystyle\sum x + ... + a_n \displaystyle\sum x^n = \displaystyle\sum y$
+	
+	$a_0 \displaystyle\sum x + a_1\displaystyle\sum x^2 + ... + a_n \displaystyle\sum x^{n+1} = \displaystyle\sum xy$
+	
+	$a_0 \displaystyle\sum x^2 + a_1\displaystyle\sum x^3 + ... + a_n \displaystyle\sum x^{n+2} = \displaystyle\sum x^2y$\\
+	$\vdots$
+	$a_0 \displaystyle\sum x^n + a_1\displaystyle\sum x^{n+1} + ... + a_n \displaystyle\sum x^{n+n} = \displaystyle\sum x^ny$
+	
+
+
+\end{center}
+
+\vspace*{0.2cm}
 
 \begin{center}
 	{\large \bf 3. ANÁLISIS}
-	
 \end{center}
+
+\vspace*{0.2cm}
 
 \noindent En una reacción quiímica, la concentración del producto $C_B$ cambia con el tiempo como se indica en la siguiente tabla:
 
@@ -255,6 +320,23 @@ Por ello presente trabajo describe la obtención de una función que describirá
 \begin{center}
 {\large \bf 4. OBSERVACIONES}
 \end{center}
+
+- Registrar puntos caracteristicos, aquellos que tengan mayor relevancia en el proceso de experimentación, a partir de estos 
+- Aplicaciones impactantes con interpolacion y minimos cuadrados 
+- Investigaciones realizandose actualmente con interpolacion o minimos cuadrados
+La interpolacion y Minimos cuadrados son la base para muchos investigaciones en ingerieria y ciencias como la fisica, quimica, hasta en temas mas recientes como el Machine Learning, especificamente en las Redes neuronales donde se usa los minimos cuadrados para encontrar el valor de la conexión entre neuronas al momento del entrenamiento.
+
+
+-Si se tiene 2 intervalos $[a' < b'] < [a , b] $ y se realiza la interpolación en cada una, entonces se aproxima mejor en $[a'< b']$ que en $[a < b]$.
+
+- Comparar la data de problema con otra data de mayor tamaño.
+- Puntos caracteristicos: aquellos que describan mejor a la curva, puntos como el maximo, minimo, puntos de inflexion en la función. Estos se optiene de replicar muchas veces el experimento.
+
+Cuando mayor es la cantidad de puntos mayor sera la aproximación.
+
+- Combinacion de ambos metodos, encontrar el polinomio con interpolacion polinomial, luego generamos mas puntos adicionales, luego lo ajustamos con minimos cuadrados, Talvez genera mejores resultados.
+
+
 
 \begin{center}
 {\large \bf 5. CONCLUSIONES}
