@@ -5,13 +5,14 @@
 # Universidad Nacional de Ingenieria - Lima, Peru
 import matplotlib.pyplot as plt
 import numpy as np
-
+import math
+from time import time
 # Epsilon_Mach
 #   return: Machine epsilon
 
 import scipy.linalg as sl
 
-def max_norm(A):    
+def max_norm(A):
     sum_row = sum(np.abs(A[0,:]))
     nrow = np.shape(A)[0]
     for i in range(1,nrow):
@@ -21,8 +22,8 @@ def max_norm(A):
     return sum_row
 
 # calcula la condicional de la matriz A con la norma del maximo
-def cond(A):    
-    invA = sl.inv(A) 
+def cond(A):
+    invA = sl.inv(A)
     return max_norm(A)*max_norm(invA)
 
 
@@ -1033,7 +1034,7 @@ def Givens(A, verbose):
 				cos = a/(np.sqrt( a**2 + b**2 ))
 				sen = b/(np.sqrt( a**2 + b**2 ))
 
-				# ====================================	
+				# ====================================
 				if verbose:
 					print("(cos, sen) = ({};{})".format(cos, sen))
 				# ====================================
@@ -1054,8 +1055,8 @@ def Givens(A, verbose):
 				if verbose:
 					print("Matriz ingresada luego de la rotacion:\n",new_A)
 				# ====================================
-        
-    
+
+
 	R = np.copy(new_A)
 	Q=Q.T
 	print("Matriz final: \n", R)
@@ -1338,10 +1339,10 @@ def solve_Householder(A, b, verbose):
 		for i in range(mini_b_hat.shape[1]):
 			temp.append(mini_b_hat[0,i])
 		mini_b_hat = np.array(temp)
-		
+
 		r = np.copy(R[:R.shape[1],:])
 
-		#=========================================		
+		#=========================================
 		if verbose:
 			print("r:\n", r)
 			print("mini_b_hat (b_hat util para matriz r):\n", mini_b_hat)
@@ -1352,7 +1353,7 @@ def solve_Householder(A, b, verbose):
 			print("finalmente x:\n{}".format(x))
 		#=========================================
 		return x
-	
+
 	else:
 		#=========================================
 		if verbose:
@@ -1437,7 +1438,7 @@ def solve_Jacobi(A, b, x_0, epsilon, n_iter=-1, verbose=False):
 	x = x_0
 
 	b_hat = np.matmul(D_inv, b)
-	
+
 	#=========================================
 	if verbose:
 		print("c:\n{}".format(b_hat))
@@ -1451,7 +1452,7 @@ def solve_Jacobi(A, b, x_0, epsilon, n_iter=-1, verbose=False):
 				print("La solución converge con una variación de epsilon = {}\nSaliendo...".format(epsilon))
 				break
 			x = np.matmul(J, x) + b_hat
-			
+
 	return x
 
 def solve_Gauss_Seidel(A, b, x_0, epsilon, n_iter=-1, verbose=False):
@@ -1465,7 +1466,7 @@ def solve_Gauss_Seidel(A, b, x_0, epsilon, n_iter=-1, verbose=False):
 	#=========================================
 
 	D, E, F = decompose(A, verbose)
-	
+
 	#=========================================
 	if verbose:
 		print("========== Invirtiendo matriz (D-E): =============")
@@ -1474,7 +1475,7 @@ def solve_Gauss_Seidel(A, b, x_0, epsilon, n_iter=-1, verbose=False):
 	DE_inv = Inverse(D - E)
 
 	G = np.matmul(DE_inv, F)
-	
+
 	#=========================================
 	if verbose:
 		print("G:\n{}".format(G))
@@ -1483,7 +1484,7 @@ def solve_Gauss_Seidel(A, b, x_0, epsilon, n_iter=-1, verbose=False):
 	x = x_0
 
 	b_hat = np.matmul(DE_inv, b)
-	
+
 	#=========================================
 	if verbose:
 		print("c:\n{}".format(b_hat))
@@ -1496,7 +1497,7 @@ def solve_Gauss_Seidel(A, b, x_0, epsilon, n_iter=-1, verbose=False):
 			if(np.linalg.norm(x - (np.matmul(G, x) + b_hat)) < epsilon):
 				print("La solución converge con una variación de epsilon = {}\nSaliendo...".format(epsilon))
 				break
-			x = np.matmul(G, x) + b_hat	
+			x = np.matmul(G, x) + b_hat
 
 	return x
 
@@ -1511,12 +1512,12 @@ def solve_SOR(A, b, x_0, w, epsilon, n_iter, verbose):
 	#=========================================
 
 	D, E, F = decompose(A, verbose)
-	
+
 	D_wE = D - w*E
 
 	#=========================================
 	if verbose:
-		print("(D - wE):\n{}".format(D_wE))		
+		print("(D - wE):\n{}".format(D_wE))
 		print("========== Invirtiendo matriz (D - wE): =============")
 	#=========================================
 	D_wE_inv = Inverse(D_wE, verbose);
@@ -1530,7 +1531,7 @@ def solve_SOR(A, b, x_0, w, epsilon, n_iter, verbose):
 	x = x_0
 
 	b_hat = w*np.matmul(D_wE_inv, b)
-	
+
 	#=========================================
 	if verbose:
 		print("c:\n{}".format(b_hat))
@@ -1544,7 +1545,7 @@ def solve_SOR(A, b, x_0, w, epsilon, n_iter, verbose):
 				print("La solución converge con una variación de epsilon = {}\nSaliendo...".format(epsilon))
 				break
 			x = np.matmul(S, x) + b_hat
-			
+
 	return x
 
 def solve_SSOR(A, b, x_0, w, epsilon, n_iter=-1, verbose=False):
@@ -1560,14 +1561,14 @@ def solve_SSOR(A, b, x_0, w, epsilon, n_iter=-1, verbose=False):
 	#=========================================
 
 	D, E, F = decompose(A, verbose)
-	
+
 	D_wE = D - w*E
 	D_wF = D - w*F
 
 	#=========================================
 	if verbose:
 		print("(D - wE):\n{}".format(D_wE))
-		print("(D - wF):\n{}".format(D_wF))		
+		print("(D - wF):\n{}".format(D_wF))
 		print("========== Invirtiendo matriz (D - wE): =============")
 	#=========================================
 	D_wE_inv = Inverse(D_wE, verbose)
@@ -1576,13 +1577,13 @@ def solve_SSOR(A, b, x_0, w, epsilon, n_iter=-1, verbose=False):
 	if verbose:
 		print("========== Invirtiendo matriz (D - wF): =============")
 	#=========================================
-	
+
 	D_wF_inv = Inverse(D_wF, verbose)
 
 	SS_1 = np.matmul( D_wF_inv, ( ((1-w)*D) + (w*E) ) )
 	SS_2 = np.matmul( D_wE_inv, ( ((1-w)*D) + (w*F) ) )
 	SS = np.matmul(SS_1, SS_2)
-	
+
 	#=========================================
 	if verbose:
 		print("SS:\n{}".format(SS))
@@ -1593,7 +1594,7 @@ def solve_SSOR(A, b, x_0, w, epsilon, n_iter=-1, verbose=False):
 	b_hat = np.matmul( (1-w)*D + w*E , D_wE_inv) + np.eye(D.shape[0])
 	b_hat = w*np.matmul(D_wF_inv, b_hat)
 	b_hat = np.matmul(b_hat, b)
-	
+
 	#=========================================
 	if verbose:
 		print("c:\n{}".format(b_hat))
@@ -1607,7 +1608,7 @@ def solve_SSOR(A, b, x_0, w, epsilon, n_iter=-1, verbose=False):
 				print("La solución converge con una variación de epsilon = {}\nSaliendo...".format(epsilon))
 				break
 			x = np.matmul(SS, x) + b_hat
-			
+
 	return x
 
 def solve_CGradient(A, b, x_0, n_iter, epsilon, delta, verbose=False):
@@ -1965,7 +1966,7 @@ def EIG_Leverrier(A, verbose=False):
 		print("=========================================")
 		print("Ecuacion final:", eq_string)
 		print("=========================================")
-	#=========================================	
+	#=========================================
 	return b_values
 
 
@@ -1984,7 +1985,7 @@ def EIG_Potencia(A, x_0, epsilon, n_iter, norm, verbose=False):
 		z_k = np.matmul(A, x_k)
 		x_k = z_k/np.linalg.norm(z_k, norm)
 		lambda_k = np.matmul(x_k.T, z_k)
-		
+
 		# ==================================================
 		if verbose:
 			print("=== i:{} ===\nx_k:\n{}\nlamdba:\n{}\n".format(i, x_k, lambda_k))
@@ -2010,7 +2011,7 @@ def EIG_Potencia_Inversa(A, x_0, epsilon, n_iter, norm, verbose=False):
 		z_k = np.linalg.solve(A, x_k)
 		x_k = z_k/np.linalg.norm(z_k, norm)
 		mu_k = np.matmul(x_k.T, z_k)
-		
+
 		# ==================================================
 		if verbose:
 			print("=== i:{} ===\nx_k:\n{}\nmu:\n{}\n".format(i, x_k, mu_k))
@@ -2032,12 +2033,12 @@ def EIG_Potencia_Inversa_Desp(A, x_0, lambda_bar, epsilon, n_iter, norm, verbose
 	mu_k = 0
 	mu_k_old = -1e100
 	C = A - lambda_bar*np.eye(A.shape[0])
-	
-	for i in range(0, n_iter):		
+
+	for i in range(0, n_iter):
 		z_k = np.linalg.solve(C, x_k)
 		x_k = z_k/np.linalg.norm(z_k, norm)
 		mu_k = np.matmul(np.matmul(x_k.T, A), x_k)
-		
+
 		# ==================================================
 		if verbose:
 			print("=== i:{} ===\nx_k:\n{}\nmu:\n{}\n".format(i, x_k, mu_k))
@@ -2052,7 +2053,7 @@ def EIG_Potencia_Inversa_Desp(A, x_0, lambda_bar, epsilon, n_iter, norm, verbose
     # A: Tridiagonal matrix
 	# k: lambda polynomial index
 
-    # return: lambda polynomial for bisection eigenvalues finding method 
+    # return: lambda polynomial for bisection eigenvalues finding method
 def Bisec_Pk(A, k):
 	a = np.diag(A)
 	b = np.diag(A, k=-1)
@@ -2063,7 +2064,7 @@ def Bisec_Pk(A, k):
 		return P0
 	elif k == 1:
 		def P1(lamb):
-			return (a[0] - lamb) 
+			return (a[0] - lamb)
 		return P1
 	else:
 		f_k1 = Bisec_Pk(A, k-1)
@@ -2076,7 +2077,7 @@ def Bisec_Pk(A, k):
 # Bisec_change_counter
 	# v: array/vector of numeric values
 
-    # return: number of times that the elements of v changed sign 
+    # return: number of times that the elements of v changed sign
 def Bisec_change_counter(v):
 	cont = 0;
 	for i in range(1, len(v)):
@@ -2091,8 +2092,8 @@ def Bisec_change_counter(v):
 	# A: Tridiagonal matrix
 	# alpha_left: initial left point of search of interval
 	# alpha_right: initial right point of search of interval
-    
-	# return: new interval [alpha_left, alpha_right] that satisfies condition 
+
+	# return: new interval [alpha_left, alpha_right] that satisfies condition
 def Bisec_find_interval(A, alpha_left, alpha_right):
 	n = A.shape[0]
 	# Creating {P0, P1, ..., Pn} redy to evaluate in a alpha
@@ -2246,7 +2247,7 @@ def EIG_Jacobi(matrix, E, verbose=False, pre_check=True):
 
 	return matrix.diagonal()[::-1]
 
-# Interpolation methods: 
+# Interpolation methods:
 
 # Ln_i: Retorna el coeficiente de Lagrange L_ni
 def Ln_i(n, i, x_vector, x):
@@ -2257,7 +2258,7 @@ def Ln_i(n, i, x_vector, x):
 		if i != j:
 			p1 *= (x - x_vector[j])
 			p2 *= (x_vector[i] - x_vector[j])
-	
+
 	return p1/p2
 
 # INT_Lagrange: Retorna el polinomio generado P_n_eq, listo para evaluar cualquier
@@ -2326,12 +2327,12 @@ def INT_Lagrange_error(x_vector, dfn_plus_1, c, verbose=True):
 		for i in range(0,n):
 			acc1 *= (x - x_vector[i])
 			acc2 *= i+1
-		
+
 		result = (acc1 * dfn_plus_1(c))/acc2
 		#=========================================
 		if verbose:
 			print("Finalmente, (x-x_0)...(x-x_{})*f^({})({}) / {}! = {}".format(n-1, n, c, n,result))
-		#=========================================		
+		#=========================================
 		return result
 	return E_n
 
@@ -2386,7 +2387,7 @@ def INT_Newton(f, x_vector, verbose=False, my_coefs=None):
 		print("Se usara los datos de \'x\':", x_vector)
 		print("=========================================")
 	#=========================================
-	
+
 	if my_coefs is None:
 		#=========================================
 		if verbose:
@@ -2395,7 +2396,7 @@ def INT_Newton(f, x_vector, verbose=False, my_coefs=None):
 		#=========================================
 		coefs = Newton_interpol_table(f, x_vector, verbose)
 		coefs = np.diag(coefs)
-	
+
 	else:
 		coefs = np.copy(my_coefs)
 
@@ -2429,33 +2430,28 @@ def INT_Newton(f, x_vector, verbose=False, my_coefs=None):
 		print("---------------------------------------------------------")
 		print("Polinomio de interpolacion generado:\n{}".format(str_eq))
 		print("---------------------------------------------------------")
-	#=========================================	
+	#=========================================
 	return P_n_eq
 
 
 if __name__ == "__main__" :
-    Cb = np.array([0,0.3,0.55,0.8,1.10,1.15],dtype=float)
-    t = np.array([0,0.1,0.4,0.6,0.8,1],dtype=float)
+
+    Cb = np.array([0.1,0.0905,0.0820,0.0741,0.0641,0.0549,0.0448,0.0368,0.021,0],dtype=float)
+    t = np.array([0.0,50,100,150,200,300,400,500,800,10000],dtype=float)
+
+    tiempo_inicial=time()
     pol=INT_Lagrange(t,Cb,True)
-    
+    tiempo_final=time()
+    print("Tiempo de ejecucion (ms): ",(tiempo_final-tiempo_inicial)*1000)
+
     print(f"Pol(1.0) = {pol(1.0)}")
-    x1 = np.linspace(0, 1, 200 , endpoint=True)        
+    x1 = np.linspace(0, 1, 200 , endpoint=True)
     y1 = pol(x1)
     print("#####################################################")
-    print(f"Para el problema , Pol(0.82) = {pol(0.82)}")
+    print(f"Para el problema , Pol(picuartos) = {pol(2.0)}")
 
     print("#####################################################")
 
     plt.plot(x1, y1, '-')
     plt.plot(t,Cb,'o')
     plt.show()
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
