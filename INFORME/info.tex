@@ -67,7 +67,7 @@
 	
 	\begin{abstract}
 		
-		En diversos campos de la ingenieria y ciencia se necesita obtener datos a partir de casos experimentales. Las reacciones quimicas no son ajenas a esta, por ello conocer las concentraciones de estas ayuda a muchos profesionales. Los químicos y biólogos miden las cantidades agentes contaminantes para determinar los niveles de \textbf{contaminación en el ambiente}. En la industria farmacéutica los laboritaristas miden las cantidades de sustancias necesarias para preparar medicamentos; todas estas de concentración determinada y de cuya exacta preparación \textbf{depende de la vida y la pronta recuperación de cientos de miles de enfermos}. En las industrias alimentarias los ingenieros miden las cantidades de sustancias, con el propósito de \textbf{incrementar sus ingresos economicos}. Este documento proporciona una comparación entre los metodos de ajuste exacto(Interpolación) y minimos cuadrados(Aproximación Funcional), además sugiere que método o la combinación de ambos predice con mayor exactitud la concentracion del producto.
+		En diversos campos de la ingenieria y ciencia se necesita obtener datos a partir de casos experimentales. Las reacciones quimicas no son ajenas a esta, por ello conocer las concentraciones de estas ayuda a muchos profesionales. Los químicos y biólogos miden las cantidades agentes contaminantes para determinar los niveles de \textbf{contaminación en el ambiente}. En la industria farmacéutica los laboritaristas miden las cantidades de sustancias necesarias para preparar medicamentos; todas estas de concentración determinada y de cuya exacta preparación \textbf{depende de la vida y la pronta recuperación de cientos de miles de enfermos}. En las industrias alimentarias los ingenieros miden las cantidades de sustancias, con el propósito de \textbf{incrementar sus ingresos economicos}. Este documento proporciona una comparación entre los metodos de ajuste exacto(Interpolación) y minimos cuadrados(Aproximación Funcional), además sugiere que metodo o la combinación de ambos predice con mayor exactitud la concentracion del producto.
 		
 	\end{abstract}
 	
@@ -83,13 +83,13 @@
 	\renewcommand{\abstractname}{Abstract}
 	
 	\begin{abstract}
-		In various fields of engineering and science you need to obtain data from experimental cases. Chemical reactions are not unrelated to this, so knowing the concentrations of these helps many professionals. Chemists and biologists measure the amounts of contaminating agents to determine the levels of contamination in the environment. In the pharmaceutical industry, the laborists measure the quantities of substances necessary to prepare medicines; all of these of determined concentration and whose exact preparation depends on the life and the quick recovery of hundreds of thousands of patients. In the food industries, engineers measure the quantities of substances, with the purpose of increasing their economic income. This document provides a comparison between the methods of exact adjustment (Interpolation) and least squares (Functional Approximation), also suggests that the method or the combination of both predicts with greater accuracy the concentration of the product.
+		\noindent Falta
 	\end{abstract}
 	
 	
 	\begin{quotation}
 		{\small
-			\textbf{Keywords:} \\ Experimental cases, Concentration, Environmental Pollution, Industries, Interpolation, Functional Approach.
+			\textbf{Keywords:} \\ 
 		}
 	\end{quotation}
 	
@@ -107,7 +107,7 @@
 		\noindent Las industrias se interesan grandemente en que las reacciones químicas se lleven a cabo rápidadmente, para \textbf{ahorrar tiempo y dinero}. Es por esto que  encontrar las concentraciones en un tiempo especifico es muy complicado, una posible solución seria contar con un dispositivo que registre en tiempo real las concentraciones, pero esto seria muy costoso. Una alternativa para esto es
 		el uso de la matematica en concreto el uso de metodos numericos.
 		
-		\noindent Por ello en presente trabajo se describe la obtención de una función que caracteriza la concentración de producto de una reacción química en función del tiempo. Esta función será calculada mediante metodos de interpolación polinomial y minimos cuadrados a partir puntos tabulados que han sido obtenidos de manera experimental.\\
+		\noindent Por ello en presente trabajo se describe la obtención de una función que caracteriza la concentración de producto de una reacción química en función del tiempo. Esta función será calculada mediante métodos de interpolación polinomial y minimos cuadrados a partir puntos tabulados que han sido obtenidos de manera experimental.\\
 		
 		
 		\begin{center}
@@ -265,7 +265,7 @@
 		No obstante, esto crea un problema, ya que se puede pasar un número infinito de curvas \textbf{entre los puntos}. Para determinar \textbf{la mejor} curva se establece un criterio que la fije y una metología que la determine. El criterio más común  consiste en pedir la suma de distancia calculadas entre el valor de la función que aproxima $p(x_i)$ y el valor de la función $f(x_i)$ dada en la tabla, sea mínima, además para evitar problemas de derivabilidad más adelante, se acustumbra utilizar las distacias $d_i$ elevadas al cuadrado; es decir, que
 		
 		\begin{center}
-			$\displaystyle\sum_{i=1}^m {[p(x_i) - f(x_i)]}^2 = \displaystyle\sum_{i=1}^m {[d_i]}^2 = mínimo$
+				$\displaystyle\sum_{i=1}^m {[p(x_i) - f(x_i)]}^2 = \displaystyle\sum_{i=1}^m {[d_i]}^2 = mínimo$
 		\end{center} 
 		
 		si queremos aproximar una función en forma tabular con un polinomio de grado $n$, el procedimiento es minimizar la función:
@@ -295,236 +295,142 @@
 		
 		\vspace*{0.2cm}
 		
-		\noindent Para nuestro problema se tiene una tabla $T$ que contiene la variación de la concentración del producto $C_B$ con respecto al tiempo.
+		\noindent Para nuestro problema se tiene una tabla que contiene la variación de la concentración del producto $C_B$ con respecto al tiempo.
 		
 		\begin{center}
-			\begin{tabular}{ |c|c|c|c|c|c|c| }
+			\begin{tabular}{ |c|c| }
 				\hline
-				$t$ & 0.00 & 0.10 & 0.40 & 0.60 & 0.80 & 1.00 \\ \hline
-				$C_B$ & 0.00 & 0.30 & 0.55 & 0.80 & 0.10 & 0.15 \\ \hline
-				
+				$t$ & $C_B$ \\ \hline
+				0.00 & 0.00 \\ \hline
+				0.10 & 0.30 \\ \hline
+				0.40 & 0.55 \\ \hline
+				0.60 & 0.80 \\ \hline
+				0.80 & 1.10 \\ \hline
+				1.00 & 1.15 \\ \hline
 			\end{tabular}
 		\end{center}
 		
 		\noindent El objetivo es \textbf{calcule la concentración} $C_B$ cuando $t = 0.82$ con los diferentes metodos mencionados y cual de ellos es \textbf{el mas preciso} para dicho problema.
-		
+				
 		\noindent Los metodos Lagrange, Newton y Mínimos Cuadrados fueron implemtados en el lenguaje pyhton, por ser este multiparadigma y robusto. Se utilizo en especial la libreria Numpy para el procesamiento matematico, aunque tambien existen otras como SysPy. 
 		
 		\vspace*{0.2cm}
 		
 		\noindent {\large \bf 3.1. Análisis de Eficiencia}
 		\vspace*{0.2cm}
+	
+		\noindent La eficiencia de un metodo se mide por medio del error, este error nos dira cuan confiable es el metodo en comparación de otro.\\
 		
-		\noindent La eficiencia de un método se mide por medio del error, este error nos dira cuan confiable es el método en comparación de otro.
-		
-		\noindent Para hallar el error se implemento un método creativo llamado \textbf{remplazo de intervalo de tiempo mínimo} consiste en calcular la concentración $C_B$ en un tiempo $t_a$ usando un método $X$ y una tabla de datos $T$, ahora remplazamos $t_a$ y su concentración $C_B$ con un $t_b$ tal que $| t_a - t_b | = min$ donde $min$ es la minima diferencia entre $t_a$ y todos los valores $t$ de la tabla $T$.
-		
-		\noindent Una vez remplazado $t_a$ en $T$ se tiene la nueva tabla $T'$, ahora calculamos con el método $X$ el valor de $C_B$ en el tiempo $t_b$. Ahora se tiene dos concentraciones $C_{B.Exp}$ de la tabla $T$ hallado experimentalmente y $C_{B.Aprox}$ de la tabla $T'$ hallado aproximadamente con el método $X$.
-		
+		\noindent Para hallar el error se implemento un metodo creativo llamado \textbf{remplazo de tiempo mínimo} consiste en calcular la concentración $C_B$ en un tiempo $t_a$ usando un metodo $X$ y una tabla de datos $T$, ahora remplazamos $t_a$ y su concentración $C_B$ con un $t_b$ tal que $| t_a - t_b | = min$ donde $min$ es la minima diferencia entre $t_a$ y todos los valores $t$ de la tabla $T$.\\
+
+		\noindent Una vez remplazado $t_a$ en $T$ se tiene la nueva tabla $T'$, ahora calculamos con el metodo $X$ el valor de $C_B$ en el tiempo $t_b$. Ahora se tiene dos concentraciones $C_{B-exact}$ de la tabla $T$ hallado experimentalmente y $C_{B-aprox}$ de la tabla $T'$ hallado con el metodo $X$.
+	
 		\noindent El error se calculara de la siguiente manera:
 		\begin{center}
-			$error = |\frac{C_{B.Aprox}-C_{B.Exp}}{C_{B.Exp}}| 100\%$
+			$error = \frac{C_{B-aprox}-C_{B-exact}}{C_{B-exact}}$
 		\end{center} 
 		
-		\noindent\textbf{Ejemplo}
-		
-		\noindent A manera de ejemplo usemos el método de Newton y calculemos la $C_B$ en el tiempo $t_a = 0.38$.
+		A manera de ejemplo usemos el metodo de Newton y calculemos la $C_B$ en el tiempo $t_a = 0.38$.
 		
 		\begin{center}
-			\includegraphics[width=5.5cm,height=4.5cm]{Newton.png}
-			
+			\includegraphics[width=7.5cm,height=6.5cm]{Newton.png}
 			Fig. Polinomio de Newton a partir de la tabla $T$
 		\end{center}
 		
-		Calculando se obtiene que en $t_a$ la $C_B =0.5338970444444444$. Ahora remplazamos por el tiempo $t_b = 0.40$ tiempo minimo y $C_{B.Exp} = 0.55$.
+		Calculando se obtiene que en $t_a$ la $C_B =0.5338970444444444$. Ahora remplazamos por el tiempo $t_b = 0.40$ tiempo minimo y $C_{B-exact} = 0.55$.
 		\begin{center}
-			\includegraphics[width=5.5cm,height=4.5cm]{Newton.png}
-			
+			\includegraphics[width=7.5cm,height=6.5cm]{Newton.png}
 			Fig. Polinomio de Newton a partir de la tabla $T'$
 		\end{center}
 		
-		Las graficas de la tabla $T$ y $T'$ parecen ser las mismas sin embargo al calcular la concentracion encontramos que $C_{B.Aprox} = 0.5500000000000002$
+		Se puede notar que parece ser la misma grafica, pero al calcular la concentracion a partir de $T'$ encontramos que $C_{B-aprox} = 0.5500000000000002$
 		
-		\noindent Hallando el $error = 2.0185873175002846e-14$, entonces nuestra interpolación para el tiempo $t_a = 0.38$ es aceptable.
+		 
 		
-		\noindent\textbf{¿Qué ocurre si no remplazamos en un intervalo de tiempo minimo?}
 		
-		\noindent Remplazando $t_a = 0.38$ con $C_B =0.5338970444444444$ en $t_b= 0.8$. 
-		\begin{center}
-			\includegraphics[width=6.5cm,height=5.5cm]{Newton_no_min.png}
-			
-			Fig. Polinomio de Newton a partir de la tabla $T'$ sin tiempo minimo.
-		\end{center}
 		
-		En la grafica se puede notar que hay dos puntos muy cercanos como si fueran uno, además que sigue describiendo una curva muy similar a las anteriores. Al calcular la concentracion encontramos que $C_{B.Aprox} = 1.0999999999999988$
-		en comparacion del $C_{B.exp} = 1.1$.
 		
-		Ahora vamos a resolver el problema calcular la concentración en $t=0.82$.				
 		
-		\noindent\textbf{Método de Lagrange}
 		
-		\noindent Calculando se obtiene que en $t_a = 0.82$ la \textbf{$C_B =1.1217764000000001$}. Remplazamos por $t_b = 0.8$ y $C_{B.Exp} = 1.10$ para optener la tabla $T'$.
 		
+		
+		
+		
+		
+		El primer metodo en analizar sera Polinomios de Lagrange, utilizando el algoritmo se encontro que para el t=0.82 la $C_B = 1.1217764000000001$ 
 		
 		\begin{center}
-			\includegraphics[width=6cm,height=5cm]{Lagrange.png}
-			
-			Fig. Polinomio de Lagrange a partir de la tabla $T$.
-			
+			\includegraphics[width=7.5cm,height=6.5cm]{Lagrange.png}
+			Fig. Grafica de polinomio usando el metodo de Lagrange
 		\end{center}
-		
-		Calculando la concentración con la tabla $T'$ se obtiene $C_{B.Aprox} = 1.1$, entoncer el \textbf{$error = 0.0\%$}.\\
-		
-		
-		\noindent\textbf{Método de Newton}
-		
-		\noindent Calculando se obtiene que en $t_a = 0.82$ la \textbf{$C_B =1.1217764000000006$}. Remplazamos por $t_b = 0.8$ y $C_{B.Exp} = 1.10$ para optener la tabla $T'$.
-		
-		\begin{center}
-			\includegraphics[width=5.5cm,height=4.5cm]{Newton.png}
-			
-			Fig. Polinomio de Newton a partir de la tabla $T'$
-		\end{center}
-		
-		Calculando la concentración con la tabla $T'$ se obtiene $C_{B.Aprox} = 1.100000000000001$, entoncer el \textbf{$error = 0.0\%$}.
-		
-		\noindent\textbf{Aproximación por Mínimos Cuadrados}
-		
-		En este caso se puede aproximar a polinomios de diferentes grados.
-		
-		\noindent\textbf{Polinomio de grado 2} 
-		
-		\noindent Calculando se obtiene que en $t_a = 0.82$ la \textbf{$C_B =1.03986632$}. 
 		
 		
 		\begin{center}
-			\includegraphics[width=6.5cm,height=5.5cm]{pol2.png}
-			
-			Fig. Polinomio minimos cuadrados de grado 2 a partir de la tabla $T$.
-			
+			\includegraphics[width=7.5cm,height=6.5cm]{Newton.png}
+			Fig. Grafica de polinomio usando el metodo de Newton
 		\end{center}
-		
-		Remplazamos por $t_b = 0.8$ y $C_{B.Exp} = 1.10$ para optener la tabla $T'$.
-		\begin{center}
-			\includegraphics[width=6.5cm,height=5.5cm]{pol2m.png}
-			
-			Fig. Polinomio minimo cuadrado de grado 2 a partir de la tabla $T'$.
-		\end{center}
-		
-		Calculando la concentración con la tabla $T'$ se obtiene $C_{B.Aprox} = 0.99858752$, entoncer el \textbf{$error = 9.219316363636375\%$}.\\
-		
-		\noindent\textbf{Polinomio de grado 5} 
-		
-		Como en los anteriores metodos se genera un polinomio de grado 5, en este tambien tambien sera del mismo grado, para poder realizar la comparativa entre metodos con las mismas condiciones.
-		
-		\noindent Calculando se obtiene que en $t_a = 0.82$ la \textbf{$C_B = 1.12177642$}. 
 		
 		
 		\begin{center}
-			\includegraphics[width=6.5cm,height=5.5cm]{polMin5.png}
-			
-			Fig. Polinomio minimo cuadrado de grado 5 a partir de la tabla $T$.
-			
+			\includegraphics[width=8.5cm,height=6cm]{eficiencia.jpg}
+			Fig. Eficiencia entre Lagrange y Newton
 		\end{center}
-		
-		Remplazamos por $t_b = 0.8$ y $C_{B.Exp} = 1.10$ para optener la tabla $T'$.
-		
-		\begin{center}
-			\includegraphics[width=6.5cm,height=5.5cm]{polMin5m.png}
-			
-			Fig. Polinomio minimos cuadrados de grado 5 a partir de la tabla $T'$.
-			
-		\end{center}
-		
-		Calculando la concentración con la tabla $T'$ se obtiene $C_{B.Aprox} = 1.10000002$, entoncer el \textbf{$error = 1.8181818071318707e-06\%$}.
-		
-		Notar que en la aproximacion por minimos cuadrados, la grafica del polinomio no pasa por los puntos de la tabla esto se puede visualizar en la siguiente imagen:
 		
 		
 		\begin{center}
-			\includegraphics[width=6.5cm,height=5.5cm]{min_ob.png}
+			\includegraphics[width=8.5cm,height=7.5cm]{minCuadrados.png}
 			
-			Fig. Polinomio minimo cuadratico de grado 5 no pasa por el punto  $t_a = 4.0$.
+			Fig. Grafica de polinomio usando el metodo de Mínimos Cuadrados
 		\end{center}
 		
-		En el método de Newton y Lagrange ocurre algo similar, pero en este caso el punto esta mucho mas cerca de la grafica del polinomio.
+		\noindent {\large \bf 3.2. Analisis de Error}
 		
-		\begin{center}
-			\includegraphics[width=6.5cm,height=5.5cm]{new_ob.png}
-			
-			Fig. Polinomio Newton grado 5 no pasa por el punto  $t_a = 4.0$ pero esta muy cerca.
-		\end{center}
+		\vspace*{0.2cm}
+		\begin{itemize}
+			\item \textbf{Método de Lagrange: } Se
+			\item \textbf{Método de Newton: }
+			\item \textbf{Aproximación por Minimos Cuadrados:}
+		\end{itemize}
 		
-		\begin{center}
-			\includegraphics[width=6.5cm,height=5.5cm]{lagrange_ob.png}
-			
-			Fig. Polinomio Lagrange grado 5 no pasa por el punto  $t_a = 4.0$ pero esta muy cerca.
-		\end{center}
-		
-		En resumen se obtuvo los siguientes tabla, donde se muestra la concentracion en el tiempo $t = 0.82$
 		\begin{center}
 			\renewcommand{\tabcolsep}{10pt}
 			\begin{tabular}{ |c|c|c| }
 				\hline
-				Método & $C_B$ & Error \\ \hline
-				Lagrange & 1.12177640+1e-16 & 0.0\% \\\hline
-				Newton & 1.12177640+6e-16 & 0.0\%\\ \hline
-				Minimos & 1.12177642  & 1.82 e-06\% \\
-				Cuadrados &  &\\ \hline \end{tabular}
+				Método            & Tiempo & error  \\ \hline
+				Lagrange          & O(n)                & e                      \\ \hline
+				Newton            & O(n)                & e                      \\ \hline
+				Minimos Cuadrados & O(n)                & e                      \\ \hline \end{tabular}
 		\end{center}
 		
+	
 		
 		\begin{center}
 			{\large \bf 4. OBSERVACIONES}
 		\end{center}
 		
-		\noindent Dentro del analisis se puedo observar fenomenos curiosos que pueden beneficiar o perjudicar significativamente a la predicción de la concentración, en lo siguiente se mencionan algunas.
+		- Registrar puntos caracteristicos, aquellos que tengan mayor relevancia en el proceso de experimentación, a partir de estos 
+		- Aplicaciones impactantes con interpolacion y minimos cuadrados 
+		- Investigaciones realizandose actualmente con interpolacion o minimos cuadrados
+		La interpolacion y Minimos cuadrados son la base para muchos investigaciones en ingerieria y ciencias como la fisica, quimica, hasta en temas mas recientes como el Machine Learning, especificamente en las Redes neuronales donde se usa los minimos cuadrados para encontrar el valor de la conexión entre neuronas al momento del entrenamiento.
 		
 		
-		\noindent\textbf{Puntos Caracteristicos} 
+		-Si se tiene 2 intervalos $[a' < b'] < [a , b] $ y se realiza la interpolación en cada una, entonces se aproxima mejor en $[a'< b']$ que en $[a < b]$.
 		
-		\noindent Los puntos caracteristicos son aquellos puntos que al no ser considerados en el proceso de predicción generan un error considerable, hasta se puede perder valores en ciertos intervalos ejemplo si se no se considera los extremos en este caso $t=0.00$ y $t=1.00$ no se podra predecir en el intervalo $[t=0.00 , t=0.10]$ y $[t=0.80 , t=1.00]$.   
+		- Comparar la data de problema con otra data de mayor tamaño.
+		- Puntos caracteristicos: aquellos que describan mejor a la curva, puntos como el maximo, minimo, puntos de inflexion en la función. Estos se optiene de replicar muchas veces el experimento.
 		
-		Sin embargo no consideramos puntos caracteristicos aquellos puntos que al ser elimnados estos no perjudican a la aproximación, es decir la grafica que se describe sigue siendo casi la misma, esto se puede notar en la parte de Análisis en la sección  del ejemplo, al eliminar el punto 0.8 la grafica y la aproximación no se altera considerablemente.
+		Cuando mayor es la cantidad de puntos mayor sera la aproximación.
 		
-		Los puntos caracteristicos se pueden optener de replicar muchas veces el experimento, uno de los propositos es que al tener estos puntos puedes eliminar aquellos que no lo son y asi reducir la cantidad de data  y acelerar el proceso de predicción con otros puntos fuera de la data.
+		- Combinacion de ambos metodos, encontrar el polinomio con interpolacion polinomial, luego generamos mas puntos adicionales, luego lo ajustamos con minimos cuadrados, Talvez genera mejores resultados.
 		
-		\noindent\textbf{Intervalos Proximos} 
+			
+		\noindent Para resolver el problema se implementará una \textbf{interfaz gráfica} donde el usuario pueda elegir el método numérico para resolver el problema, además podrá hallar la $C_B$ en el cualquier tiempo $t$.  
 		
-		\noindent Si se tiene 2 intervalos $A = [a' , b']$, $B = [a , b]$ donde $|b'-a'| < |b-a|$ si se realiza la prediccion de un $c' \in A $ y un $c \in B$, entonces la predicción de $c'$ es mucho mejor que $c$.
-		
-		
-		\noindent\textbf{Cantidad de puntos}
-		
-		\noindent Dentro del analisis la cantidad de data o puntos es un parametro muy relevante ya que cuando hay mayor cantidad de puntos la predicción sera mejor. Sin embargo cuando se tiene muchos puntos se realiza más operaciones y por se requiere de mayor capacidad de computo.
-		
-		\noindent\textbf{Comparación de metodos}
-		
-		\noindent Los resultados de los metodos son iguales hasta la septima cifra decimal, pero en los metodos de interpolación se obtiene un adicional de 1e-16 para Lagrange y 6-e16  para Newton el cual es insignificante para el problema.
-		
-		
+		\noindent Con esto es usuario podrá comparar la eficiencia de los diferentes métodos numéricos ver cual es el mejor y el peor, también podrá insertar sus datos para un mayor aprendizaje, ya que la \textbf{eficiencia de los métodos} depende del problema y por ende de los datos.
 		
 		\begin{center}
 			{\large \bf 5. CONCLUSIONES}
-			
 		\end{center}
-		
-		Cuando la información tabular es aproximada hasta cierto número de cifras significativa, por ejemplo las tablas de logaritmos, se recomienta el método de interpolación. En cambio cuando los datos son obtenidos experimentalmente, no tiene sentido encontrar un polinomio que pase por los puntos sino más bien que pase entre ellos; entonces, el método de mínimos cuadrados es el aplicable.
-		
-		\noindent\textbf{Mejor método}
-		
-		\noindent Se concluye que para el problema el mejor método es mínimos cuadrados porque los datos son hallados experimentalmente sin embargo si se cuenta con poca capacidad de computo y se realizan demasiados calculos se recomienda un método de interpolación.
-		
-		Una solución para la no realizar demasidas operación es utilizar la programación dinamica, este almacena las sumatorias en variables para su posterior uso, la programación dinamica aumenta la complejidad de almacenamiento y disminuye la complejidad computacional.
-		
-		
-		Además la interpolacion y Minimos cuadrados son la base para muchos investigaciones en ingerieria y ciencias como la fisica, quimica, hasta en aplicaciones mas recientes en el Machine Learning, como las Redes neuronales donde se usa el método de mínimos cuadrados para encontrar el valor de la conexión entre neuronas al momento del entrenamiento. 
-		
-		\noindent\textbf{Interfaz grafica}
-		
-		\noindent Para resolver el problema se implemento una \textbf{interfaz gráfica} donde el usuario puede elegir el método numérico para resolver el problema, además podrá hallar la $C_B$ en el cualquier tiempo $t$.  
-		
-		\noindent Con esto es usuario podrá comparar la eficiencia de los diferentes metodos numéricos ver cual es el mejor y el peor, también podrá insertar sus datos para un mayor aprendizaje, ya que la \textbf{eficiencia de los metodos} depende de cada problema y por ende de los datos. Se puede descargar los script de los metodos y la interfaz grafica en [7].
 		
 		\begin{center}
 			{\large \bf Agradecimientos}
@@ -549,19 +455,16 @@
 			\small
 			\item[1.] Jaan Kiusalaas, \textit{Numerical Methods in Engineering\linebreak with python.} Cambrige University Press \textbf{37} (2010).
 			\item[2.] L.Héctor Juaréz V., \textit{Análisis Númerico} Universidad Autónoma Metropolitana \textbf{2008} (2010).
-			\item[3.] W. Kincaid, D. Cheney, \textit{metodos Númericos y Computación,} sexta edición. Cengage Learning, 300-305.
+			\item[3.] W. Kincaid, D. Cheney, \textit{Métodos Númericos y Computación,} sexta edición. Cengage Learning, 300-305.
 			
 			\item[4.] Walter Mora F.,
-			\textit{Introducción a los metodos Numéricos,} primera edición. Instituto Tecnológico de Costa Rica, 2013.
+			\textit{Introducción a los Métodos Numéricos,} primera edición. Instituto Tecnológico de Costa Rica, 2013.
 			
 			\item[5.] Dr. Herón Morales Marchena,
 			\textit{Interpolación, Diferenciación e Integración Numérica,} http://biblioteca.uns.edu.pe/saladocentes/archivoz/cu\\rzoz/cuaderno\_2.pdf.
 			
 			\item[6.] Pontificia Universidad Católica del Perú, 2011
 			\textit{Química General,} http://corinto.pucp.edu.pe/quimicageneral\\/unidades-q2/unidad-2-cinetica-quimica.html.
-			
-			\item[7.] Repositorio del proyecto en github\\
-			https://github.com/nicklc007/Proyecto-2-Numerico
 			%---------------------------------------------------------------------
 			%
 		\end{list}

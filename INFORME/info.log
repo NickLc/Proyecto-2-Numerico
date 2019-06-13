@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.27)  12 JUN 2019 23:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.27)  12 JUN 2019 00:38
 entering extended mode
-**./main.tex
-(main.tex
+**./info.tex
+(info.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -1011,13 +1011,13 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \c@solucion*=\count154
 \c@algoritmo=\count155
 \c@proposicion=\count156
- (main.aux
+ (info.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-\openout1 = `main.aux'.
+\openout1 = `info.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
 LaTeX Font Info:    ... okay on input line 56.
@@ -1076,9 +1076,9 @@ LaTeX Info: Redefining \ref on input line 56.
 LaTeX Info: Redefining \pageref on input line 56.
 LaTeX Info: Redefining \nameref on input line 56.
 
-(main.out) (main.out)
+(info.out) (info.out)
 \@outlinefile=\write4
-\openout4 = `main.out'.
+\openout4 = `info.out'.
 
 LaTeX Info: Redefining \. on input line 56.
 LaTeX Info: Redefining \% on input line 56.
@@ -1089,7 +1089,12 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Try loading font information for U+msb on input line 61.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 92--94
+
+ []
+
+[1
 
 {C:/Users/ADMIN/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 110--111
@@ -1182,103 +1187,58 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.319 		
+l.316 		
          [4]
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
+
+ []
+
 <Newton.png, id=35, 569.12625pt x 434.62375pt>
 File: Newton.png Graphic file (type png)
 <use Newton.png>
-Package pdftex.def Info: Newton.png  used on input line 334.
-(pdftex.def)             Requested size: 156.4885pt x 128.04047pt.
+Package pdftex.def Info: Newton.png  used on input line 336.
+(pdftex.def)             Requested size: 213.39577pt x 184.94807pt.
 File: Newton.png Graphic file (type png)
 <use Newton.png>
-Package pdftex.def Info: Newton.png  used on input line 341.
-(pdftex.def)             Requested size: 156.4885pt x 128.04047pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 352--353
-\OT1/cmr/m/n/10 Remplazando $\OML/cmm/m/it/10 t[] \OT1/cmr/m/n/10 = 0[]38$ con 
-$\OML/cmm/m/it/10 C[] \OT1/cmr/m/n/10 =
- []
-
-<Newton_no_min.png, id=37, 462.528pt x 344.0052pt>
-File: Newton_no_min.png Graphic file (type png)
-<use Newton_no_min.png>
-Package pdftex.def Info: Newton_no_min.png  used on input line 354.
-(pdftex.def)             Requested size: 184.9444pt x 156.4911pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.361 		
-         [5 <./Newton.png>]
-<Lagrange.png, id=42, 582.175pt x 437.635pt>
+Package pdftex.def Info: Newton.png  used on input line 342.
+(pdftex.def)             Requested size: 213.39577pt x 184.94807pt.
+<Lagrange.png, id=37, 582.175pt x 437.635pt>
 File: Lagrange.png Graphic file (type png)
 <use Lagrange.png>
-Package pdftex.def Info: Lagrange.png  used on input line 370.
-(pdftex.def)             Requested size: 170.70967pt x 142.26308pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
-
- []
-
+Package pdftex.def Info: Lagrange.png  used on input line 363.
+(pdftex.def)             Requested size: 213.39375pt x 184.94066pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.365 		\end{center}
+                     [5 <./Newton.png>]
 File: Newton.png Graphic file (type png)
 <use Newton.png>
-Package pdftex.def Info: Newton.png  used on input line 384.
-(pdftex.def)             Requested size: 156.4885pt x 128.04047pt.
-<pol2.png, id=43, 462.528pt x 344.0052pt>
-File: pol2.png Graphic file (type png)
-<use pol2.png>
-Package pdftex.def Info: pol2.png  used on input line 401.
-(pdftex.def)             Requested size: 184.9444pt x 156.4911pt.
-<pol2m.png, id=44, 462.528pt x 344.0052pt>
-File: pol2m.png Graphic file (type png)
-<use pol2m.png>
-Package pdftex.def Info: pol2m.png  used on input line 409.
-(pdftex.def)             Requested size: 184.9444pt x 156.4911pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.411 			F
-          ig. Polinomio minimo cuadrado de grado 2 a partir de la tabla $T'$.
-[6 <./Newton_no_min.png> <./Lagrange.png> <./pol2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 414--415
+Package pdftex.def Info: Newton.png  used on input line 369.
+(pdftex.def)             Requested size: 213.39577pt x 184.94807pt.
+<eficiencia.jpg, id=42, 416.30531pt x 225.84375pt>
+File: eficiencia.jpg Graphic file (type jpg)
+<use eficiencia.jpg>
+Package pdftex.def Info: eficiencia.jpg  used on input line 375.
+(pdftex.def)             Requested size: 241.85109pt x 170.72636pt.
 
+Overfull \hbox (14.22908pt too wide) in paragraph at lines 375--377
+ [] 
  []
 
-<polMin5.png, id=51, 462.528pt x 344.0052pt>
-File: polMin5.png Graphic file (type png)
-<use polMin5.png>
-Package pdftex.def Info: polMin5.png  used on input line 424.
-(pdftex.def)             Requested size: 184.9444pt x 156.4911pt.
-<polMin5m.png, id=52, 462.528pt x 344.0052pt>
-File: polMin5m.png Graphic file (type png)
-<use polMin5m.png>
-Package pdftex.def Info: polMin5m.png  used on input line 433.
-(pdftex.def)             Requested size: 184.9444pt x 156.4911pt.
-<min_ob.png, id=53, 462.528pt x 344.0052pt>
-File: min_ob.png Graphic file (type png)
-<use min_ob.png>
-Package pdftex.def Info: min_ob.png  used on input line 445.
-(pdftex.def)             Requested size: 184.9444pt x 156.4911pt.
-<new_ob.png, id=54, 462.528pt x 344.0052pt>
-File: new_ob.png Graphic file (type png)
-<use new_ob.png>
-Package pdftex.def Info: new_ob.png  used on input line 453.
-(pdftex.def)             Requested size: 184.9444pt x 156.4911pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.455 			F
-          ig. Polinomio Newton grado 5 no pasa por el punto  $t_a = 4.0$ per...
-[7 <./pol2m.png> <./polMin5.png> <./polMin5m.png> <./min_ob.png>]
-<lagrange_ob.png, id=63, 462.528pt x 344.0052pt>
-File: lagrange_ob.png Graphic file (type png)
-<use lagrange_ob.png>
-Package pdftex.def Info: lagrange_ob.png  used on input line 459.
-(pdftex.def)             Requested size: 184.9444pt x 156.4911pt.
+<minCuadrados.png, id=43, 462.528pt x 344.0052pt>
+File: minCuadrados.png Graphic file (type png)
+<use minCuadrados.png>
+Package pdftex.def Info: minCuadrados.png  used on input line 381.
+(pdftex.def)             Requested size: 241.84982pt x 213.39648pt.
 
-Overfull \hbox (6.35059pt too wide) in paragraph at lines 467--474
+Overfull \hbox (14.22781pt too wide) in paragraph at lines 381--382
  [] 
  []
 
@@ -1286,31 +1246,31 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.507 		\begin{center}
-                       [8 <./new_ob.png> <./lagrange_ob.png>]pdfTeX warning (ex
-t4): destination with the same identifier (name{page.}) has been already used, 
-duplicate ignored
+l.415 		
+         [6 <./Lagrange.png> <./eficiencia.jpg> <./minCuadrados.png>]pdfTeX war
+ning (ext4): destination with the same identifier (name{page.}) has been alread
+y used, duplicate ignored
 <to be read again> 
                    \relax 
-l.539 	\newpage
-                [9]
-Underfull \hbox (badness 10000) in paragraph at lines 557--559
+l.445 	\newpage
+                [7]
+Underfull \hbox (badness 10000) in paragraph at lines 463--465
 []\OT1/cmr/m/n/9 Dr. Heron Mo-ra-les Mar-che-na, \OT1/cmr/m/it/9 In-ter-po-la-
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 557--559
+Underfull \hbox (badness 10000) in paragraph at lines 463--465
 \OT1/cmr/m/it/9 cion, Di-fe-ren-cia-cion e In-te-gra-cion Numeri-ca,
  []
 
 
-Overfull \hbox (3.63745pt too wide) in paragraph at lines 557--559
+Overfull \hbox (3.63745pt too wide) in paragraph at lines 463--465
 \OT1/cmr/m/n/9 http://biblioteca.uns.edu.pe/saladocentes/archivoz/cu 
  []
 
 
-Overfull \hbox (4.09424pt too wide) in paragraph at lines 560--562
+Overfull \hbox (4.09424pt too wide) in paragraph at lines 466--470
 \OT1/cmr/m/it/9 ca Ge-ne-ral, \OT1/cmr/m/n/9 http://corinto.pucp.edu.pe/quimica
 general 
  []
@@ -1319,30 +1279,30 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.569 \end{document}
-                    %\grid [10]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 569.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 569.
- (main.aux
+l.472 \end{document}
+                    %\grid [8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 472.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 472.
+ (info.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 569.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 569.
-Package rerunfilecheck Info: File `main.out' has not changed.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 472.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 472.
+Package rerunfilecheck Info: File `info.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 569.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 472.
  ) 
 Here is how much of TeX's memory you used:
- 17846 strings out of 493305
- 325401 string characters out of 3129802
- 408553 words of memory out of 3000000
- 21036 multiletter control sequences out of 15000+200000
+ 17816 strings out of 493305
+ 324949 string characters out of 3129802
+ 408551 words of memory out of 3000000
+ 21011 multiletter control sequences out of 15000+200000
  8155 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,8n,56p,1083b,524s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,8n,56p,1082b,526s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTe
@@ -1358,9 +1318,9 @@ gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files
 /type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmti9.pfb>
-Output written on main.pdf (10 pages, 384165 bytes).
+Output written on info.pdf (8 pages, 296136 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
+ 109 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
